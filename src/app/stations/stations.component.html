@@ -1,0 +1,10 @@
+
+<body>
+    <h4 *ngIf="city">{{city}} stations</h4>
+    <div *ngFor='let cs of cityStations'>
+        <div *ngIf="cs.Name==city">
+            <button *ngFor="let station of cs.Stations" (click)='play(station.url)' class="btn btn-outline-dark">{{station.name}}</button>
+        </div>
+    </div>
+    <audio controls autoplay [src]='source' type="audio/mpeg"></audio>
+</body>

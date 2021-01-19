@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {CitiesService} from './services/cities.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'FinalRadio';
+  city = '';
+
+  cities: any;
+
+  constructor(private data : CitiesService){} 
+  
+  ngOnInit(): void {
+    this.data.getCities().subscribe(d => {
+      this.cities = d;
+    });
+  }
 }
