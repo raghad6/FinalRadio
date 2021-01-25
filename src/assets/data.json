@@ -1,7 +1,7 @@
 [{
     "Name": "Hebron",
     "Stations": [{
-            "name": "Hebron",
+            "name": "Al-Rabia",
             "url": "http://alhaneny.com:8056/;stream.mp3&13202692901&duration=99999&id=scplayer&autostart=true"
         },
         {
@@ -20,11 +20,10 @@
 },
 {
     "Name": "Ramallah",
-    "Stations": []
-},
-{
-    "Name": "Tulkarm",
-    "Stations": []
+    "Stations": [{
+        "name": "Ajial",
+        "url": "http://streamer.mada.ps:8008/AJYALs"
+    }]
 },
 {
     "Name": "Jenin",

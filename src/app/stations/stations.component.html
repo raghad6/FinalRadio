@@ -1,10 +1,9 @@
 
-<body>
-    <h4 *ngIf="city">{{city}} stations</h4>
-    <div *ngFor='let cs of cityStations'>
-        <div *ngIf="cs.Name==city">
-            <button *ngFor="let station of cs.Stations" (click)='play(station.url)' class="btn btn-outline-dark">{{station.name}}</button>
-        </div>
-    </div>
-    <audio controls autoplay [src]='source' type="audio/mpeg"></audio>
-</body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="mobile-content">
+    <i (click)=" playAudio() " class="fa" [ngClass]='{ "fa-pause": playStatus, "fa-play": !playStatus}'></i>
+</div>
+<div class="stations">
+    <h4 *ngIf="cityName">{{cityName}} stations</h4>
+    <button class="s-names" *ngFor="let station of cityStations" (click)="play(station.url)"  class="btn btn-outline-dark">{{station.name}}</button>
+</div>

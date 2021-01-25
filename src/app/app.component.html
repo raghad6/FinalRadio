@@ -1,6 +1,29 @@
+<!-- 
+<div>
+    <label > Select a city :  </label>
+    <select name="city" [(ngModel)]="city"  (change)="selectCity(city)" >
+        <option *ngFor="let city of cities" value="{{city.Name}}" >{{city.Name}}</option>
+    </select>
+    <app-stations [cityStations]='selectedStations' [cityName]="selectedCity"></app-stations>
+</div>  -->
 
-<h1>Select a city : </h1>
-<h1>{{title}}</h1>
-<button type="button" *ngFor='let city of cities' (click)='choosenCity = city.Name' class="btn btn-outline-dark">{{city.Name}}</button>
-<app-stations [city]='choosenCity'></app-stations>
+<!-- <div>
+    <img src="{{myimage}}" (click)="Change()">
+</div>  -->
+
+ <!-- <div class="stations">
+    <h5> <b> {{city}}</b> Stations :</h5>
+    </div>    -->
+
+
+<div class="main-contant">
+    <div>
+        <label > Select a city :  </label>
+        <select (change)="onChange($event)" name='cities'>
+            <option *ngFor='let city of cities' value='{{city.Name}}'>{{city.Name}}</option>
+        </select>
+        <app-stations [cityStations]='selectedStations'  [cityName]="selectedCity">{{city}}</app-stations>
+    </div>
+</div> 
+
 
